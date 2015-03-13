@@ -17,13 +17,14 @@ header {
     color: #eee;
     margin: 0;
     position: fixed;
+    z-index: 999;
 
     transition: height 1s;
     }
     #logo{
         margin:.75em;
         width: 30%;
-        max-width: 110px;
+        max-width: 7em;
         float: left;
         border: 0;
         
@@ -78,7 +79,7 @@ header {
                         width: 8em;
                         text-align: right;
                         text-decoration: none;
-                        line-height: 30px;
+                        line-height: 2em;
                         padding: 0 .75em;
 
                         transition: background .3s; 
@@ -108,9 +109,9 @@ header {
     .form-busca{
         margin: 0 auto;
         width: 90%;
-        max-width: 350px;
+        max-width: 24em;
         border-radius: .25em;
-        border: 1px solid #fff;
+        border: .01em solid #fff;
         border-bottom: 0;
         background: rgba(255, 255, 255, 1);
         text-align: center;
@@ -119,8 +120,8 @@ header {
             font-size: 2em;
             color: #f88;
             text-transform: uppercase;
-            word-spacing: 5px;
-            letter-spacing: -1px;
+            word-spacing: .3em;
+            letter-spacing: -.1em;
             font-weight: 600;
         }
         form select{
@@ -138,68 +139,156 @@ header {
             color: #fff;
             margin: 1em 0;
         }
-#sobre{background: #fff;}
-#cadastro{background: #0cf; text-align: center; padding: 3em 0}
-    .cadastro-mobile, .cadastro-pc{width: 100%;}
-        .cadastro-title{
-            font-size: 1.5em;
-            text-align: center;
-            color: #fff;
-            font-weight: 400;
+#sobre{background: #fff;padding: 2em 0 24.5em 0}
+    .sobre-text{
+        margin: 2em 11em;
+        color: #0cf;
+        font-weight: 400;
+        font-size: 2em;
+        text-align: center;
+        line-height: 1.25em;
         }
-        .cadastro-text{
+    .sobre-icon{margin: 1em; width: 3.1em}
+        .sobre-icon:nth-child(2){margin: 1em 1em 1em 18em}
+    .sobre-responsivo{
+        margin: 3em 4em;
+        width: 22%;
+        color: #0cf;
+        font-weight: 400;
+        font-size: 2.5em;
+        text-align: right;
+        float: left;
+        line-height: 1.25em;
+    }
+    .sobre-responsivo-img{
+        position: absolute;
+        width: 45%;
+        margin: 10em 0 0 -38%;
+    }
+#cadastro{background: #0cf; text-align: center;}
+    .cadastro-mobile{padding: 3em 0;}
+        .mobile-text{
             font-size: 1em;
             color: #fff;
             padding: 0;
-            margin: 0 10% 15% 10%;
-            width: 80%;
-        }
-        .cadastro-button{
-            color: #f88 !important;
-            background: #fff;
-            font-size: 1.5em;
-            margin: 5em 0;
-            padding: 1em;
-            border-radius: 3px;
-
-            /*transition: background .3s, color .3s;*/
+            margin: 2em auto;
+            max-width: 19em;
             }
-            .cadastro-button:hover{
-                color: #fff !important;
+            .cadastro-title{
+                font-size: 1.5em;
+                text-align: center;
+                color: #fff;
+                font-weight: 400;
+            }
+            .cadastro-button{
+                color: #f88 !important;
+                background: #fff;
+                font-size: 1.5em;
+                margin: 0em 0;
+                padding: 1em;
+                border-radius: .15em;
+                display: inline-block;
+
+                /*transition: background .3s, color .3s;*/
+                }
+                .cadastro-button:hover{
+                    color: #fff !important;
+                    background: #f88;
+                    }
+    .cadastro-pc{padding: 3em 0 15em 0;}
+        .pc-text{
+            margin: 2em 11em;
+            color: #fff;
+            font-weight: 400;
+            font-size: 2em;
+            text-align: center;
+            line-height: 1.25em;
+        }
+        .cadastro-gratis{
+            border: solid .1em #fff;
+            margin: 0 0 0 24%;
+            padding: 1em 0 0 0;
+            width: 25%;
+            float: left;
+            font-size: 1.25em;
+            text-align: center;
+            color: #0cf;
+            background: #fff;
+            border-radius: .3em;
+            }
+            .cadastro-gratis-button{
+                display: block;
+                width: 70%;
+                margin: 2em 15% 1em 15%;
+                padding: 5%;
+                color: #fff;
+                background: #0cf;
+                border-radius: .3em;
+
+                transition: width .3s, margin .3s;
+                }
+        .cadastro-vip{
+            border: solid .1em #fff;
+            margin: 0 24% 0 0;
+            padding: 1em 0 0 0;
+            width: 25%;
+            float: right;
+            font-size: 1.25em;
+            text-align: center;
+            color: #f88;
+            background: #fff;
+            border-radius: .3em;
+            }
+            .cadastro-vip-button{
+                display: block;
+                width: 70%;
+                margin: 2em 15% 1em 15%;
+                padding: 5%;
+                color: #fff;
                 background: #f88;
+                border-radius: .3em;
+
+                transition: width .3s, margin .3s;
+                }
+        .cadastro-gratis-button:hover, .cadastro-vip-button:hover{
+            width: 80%;
+            margin: 2em 10% 1em 10%;
+            color: #fff !important;
             }
 #contato{background: #f88; padding: 3em 0 8em 0}
     .contato-title{
+        /*margin: 2em 11em;*/
         color: #fff;
-        font-size: 1.5em;
         font-weight: 400;
+        font-size: 2em;
         text-align: center;
+        line-height: 1.25em;
     }
     #contato form{
         width: 90%;
-        max-width: 690px;
+        max-width: 50em;
         margin: 0 auto;
         }
         #contato input,
         #contato textarea{
             width: 100%;
-            border-radius: 3px;
+            border-radius: .15em;
             border: 0;
             padding: .25em;
             margin: .25em 0;
         }
         #contato textarea{height: 5em;}
 
-        input[type="reset"],input[type="submit"]{width: 49% !important; margin: .25em 0; padding: 1em !important}
+        input[type="reset"], #contato input[type="submit"]{width: 49% !important; margin: .25em 0; padding: 1em !important}
         input[type="reset"]{
             float: left;
-            border: 2px solid #fff !important;
+            border: .125em solid #fff !important;
             background: transparent;
             color: #fff;
         }
-        input[type="submit"]{
+        #contato input[type="submit"]{
             float: right;
-            border: 2px solid #fff !important;
+            border: .125em solid #fff !important;
             background: #0cf;
             color: #fff;
         }
@@ -217,24 +306,12 @@ footer {
         margin: .8em 0 0 1em;
         font-weight: 200;
         }            
-    .cont{
-        float: left;
-        width: 37%;
-        margin: 0px 0px 0px 10%;
-        }
-        .cont:first-child{
-            float: right;
-            width: 14.2em;
-            margin: 0 10% 0 0;
-        }
         .cont p:first-child{
             letter-spacing: .5em;
             font-weight: 500;
             margin: 0;
             line-height: 5em;
         }
-        .cont:nth-child(2) p:nth-child(2){margin: 1.2em 0 0 1em; width: 50%; text-align: left}
-        .cont:nth-child(2) p:nth-child(3){margin: 0 0 0 1em; width: 50%; text-align: left}
         .cont img {
             width: 3em;
             border-radius: 1em;
@@ -249,19 +326,74 @@ footer {
         background-color: #444;
         color: #999;
         font-weight: 200;
-        padding: 1em 0 0.7em 0;
+        padding: 1em 0;
         text-align: center;
      }
 a:link, a:visited, a:active, a:hover {
-    color: inherit;
     text-decoration: none;
     }
-
-@media screen and (max-width: 1000px) { /*  T A B L E T   E   C E L U L A R  */
-    nav ul li:nth-child(2), #sobre, .cadastro-pc{display: none;}
+@media screen and (max-width: 1025px){ /*  T A B L E T   E   C E L U L A R  */
+    #sobre,
+    nav ul li:nth-child(2),
+    .cadastro-pc{display: none;}
     .cadastro-mobile{display: block;}
     }
-@media screen and (min-width: 1000px) { /*  C O M P U T A D O R  */
-    nav ul li:nth-child(2), #sobre, .cadastro-pc{display: block;}
+@media screen and (min-width: 1025px){ /*  C O M P U T A D O R  */
+    body{
+        background: url(imgs/bg_desktop.jpg) no-repeat 0% -25%;
+        background-position: 30% 0;
+        background-attachment: fixed;
+        font-size: 1.2vw;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    header{padding: 0 3%;}
+    #sobre,
+    nav ul li:nth-child(2),
+    .cadastro-pc{display: block;}
     .cadastro-mobile{display: none;}
+    }
+@media screen and (min-width: 790px){
+    .cont{
+        float: left;
+        margin: 0px 0px 0px 5%;
+        max-width: 50%;
+        }
+        .cont:first-child{
+            float: right;
+            margin: 0 5% 0 0;
+        }
+        .cont:nth-child(2) p:nth-child(2){margin: 1.2em 0 0 1em; width: 50%; text-align: left}
+        .cont:nth-child(2) p:nth-child(3){margin: 0 0 0 1em; width: 50%; text-align: left}
+    }
+@media screen and (max-width: 789px){
+    .cont{
+        width: 50%;
+        float: right;
+        text-align: center;
+        margin: 0 0 2em 0;
+        }
+        .cont p:first-child{
+            display: block;
+            margin: 0;
+            text-align: center;
+            }
+            .cont p{
+                display: inline-block;
+                width: 100%;
+                margin: 0;
+                float: none;
+                text-align: center;
+                }
+    footer a{float: none;}
+    .foot{padding: 1em 5%;}
+    }
+@media screen and (max-width: 420px){
+    .cont{width:100% !important;}
+    .cont a{
+        margin: 0 1em 0 0;
+    }
     }

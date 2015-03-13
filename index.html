@@ -68,6 +68,42 @@
 				    	height: $(this).scrollTop() > 100? "3.5em":"0em"
 				    });
 				});
+			// C H A N G E   B A C K G R O U N D
+			function sexta(){
+
+				var d = new Date(); /*** create a date object for use ***/
+				var i = d.getDay(); /*** use the date object to get the day
+										of the week - this will be a number
+										from 0 to 6 - sunday=0, saturday=6
+										-it's the way counting works in javascript
+										it starts at 0 like in the arrays ***/
+
+				var hoje = getDay();
+			}
+			
+
+			function chgDailyImg() {
+
+		    var weekday = new Array();
+
+		    weekday[0] = "Domingo";
+		    weekday[1] = "Segunda";
+		    weekday[2] = "Tuesday";
+		    weekday[3] = "Wednesday";
+		    weekday[4] = "Thursday";
+		    weekday[5] = "Sexta";
+		    weekday[6] = "Saturday";
+
+
+			document.body.style.background = 'imgs/bg_mobile.jpg';
+
+			}
+
+
+
+
+
+
 		</script>
 	</head>
 	<body>
@@ -88,6 +124,8 @@
 		<h1 class="sobre">Um site de busca de restaurantes.</h1>
 		<h2 class="sobre">Simples assim.</h2>
 		<h2 class="sobre">Organizado e completo também.</h2>
+
+
 		<form name="form_busca" method="GET" action="busca.php" class="form-busca">
 			<p class="form-title">Busque aqui</p>
 			<select class="drop" name="drop_cidade[]"  id="select5"/>
@@ -123,51 +161,51 @@
 				<option value='italiana'>Comida Italiana</option>
 				<option value='chinesa'>Comida Chinesa</option>
 				</select>
-			<input type="button" value="E LÁ VAMOS NÓS" class="busca-button"/>
+			<input type="submit" value="E LÁ VAMOS NÓS" class="busca-button"/>
 			</form>
 		</div>
 	<div id="sobre">
-		<div class="top">SOBRE</div>
-        <div class="vermelho">
-    	<h4>O find food é um site de busca, como outros, mas organizado e completo, focado<br>
-        	em bares, restaurantes, lanchonetes ou qualquer outro lugar que sirva comida.</h4>
-			<img src="imgs/UI_responsivo.png">
-			</div>
-			<article>
-            	<img src="imgs/foto_sobre.png">
-                <p>
-                    É um saco ficar um tempão<br>
-                    buscando alguma coisa pra comer<br>
-                    e acabar ligando ou indo<br>
-                    no mesmo lugar de sempre.</p>
-                <p>
-                    <i><b>Douglas Medina e Bruno Vargas</b>,
-                    sobre seus problemas com sites de busca</i></p>               
-			</article>
-            <div class="vermelho2">
-				<h1>POR ISSO SURGIU O FIND FOOD</h1>
-                <h3>Nasceu da necessidade de REALMENTE encontrar lugares legais.</h3>
-                <h2>Existem outros sites de busca por aí, mas nenhum deles é tão legal como o find food ;)</h2>
-			</div>
-            <div id="azul">
-            	<h2>AH, É DE GRAÇA</h2>
-            </div>
-        	</div>
-	<div id="cadastro">
+		<p class="sobre-text">
+			O find food é um site de busca,
+			como outros, mas organizado e
+			completo, focado em bares,
+			restaurantes, lanchonetes ou
+			qualquer outro lugar que sirva
+			comida.
+		</p>
 		
+		<img src="imgs/icons/057.png" class="sobre-icon"><!-- sushi -->
+		<img src="imgs/icons/061.png" class="sobre-icon"><!-- massa -->
+		<img src="imgs/icons/066.png" class="sobre-icon"><!-- refri -->
+		<img src="imgs/icons/068.png" class="sobre-icon"><!-- pizza -->
+		<img src="imgs/icons/063.png" class="sobre-icon"><!-- hamburguer -->
+		<img src="imgs/icons/075.png" class="sobre-icon"><!-- drink -->
+		<img src="imgs/icons/065.png" class="sobre-icon"><!-- batata frita -->
+		<img src="imgs/icons/053.png" class="sobre-icon"><!-- donut -->
+		<img src="imgs/icons/037.png" class="sobre-icon"><!-- frango -->
+		
+		<p class="sobre-responsivo">E o melhor: dá pra acessar de <b><i>qualquer lugar.</i></b></p>
+		<img src="imgs/UI_responsivo.png" class="sobre-responsivo-img">
+		</div>
+	<div id="cadastro">
 		<div class="cadastro-mobile">
 			<p class="cadastro-title">Quer cadastrar um lugar?</p>
-			<p class="cadastro-text">Recomendamos usar um computador, ao invés de um celular/tablet.
+			<p class="mobile-text">Recomendamos usar um computador, ao invés de um celular/tablet.
 			Mas se você realmente quiser fazer um cadastro...</p>
-			<a class="cadastro-button" href="ffood.com.br/cadastro.php">CADASTRAR UM LUGAR</a>
-		</div>
-		
+			<a class="cadastro-button" href="http://ffood.com.br/cadastro.php">CADASTRAR UM LUGAR</a>
+			</div>
 		<div class="cadastro-pc">
-			Aqui a liberdade reina;
-			<a href="http://www.ffood.com.br/cadastro.php"><img src="imgs/Untitled-1.png"></a>
-           	<a href="http://www.ffood.com.br/cadastro.php"><img src="imgs/Untitled-4.fw.png"></a>
-		</div>
-	
+			<p class="pc-text">Aqui é todo mundo de casa: pode abrir a geladeira e pode colaborar tbm.</p>
+			<div class="cadastro-gratis">
+				Conhece um lugar legal?
+				<a href="http://ffood.com.br/cadastro.php" class="cadastro-gratis-button">CADASTRO GRÁTIS</a>
+				</div>
+			<div class="cadastro-vip">
+				Ou TEM um lugar legal? ;)
+				<a href="http://ffood.com.br/cadastro.php?check-vip" class="cadastro-vip-button">CADASTRO VIP</a>
+				</div>
+
+			</div>
 		</div>
     <div id="contato">
     	<div>
@@ -197,7 +235,7 @@
 		            <p>51 9593 6693 - 51 9788 2510</p>
 		            <p>contato@ffood.com.br</p>
 		        </div>
-		        <div class="foot"> &copy;2013 - Find Food - Projetado e desenvolvido com carinho pra galera mais cool (e faminta) da internet. </div>
+		        <div class="foot"> &copy;2013-2015  |  Find Food  |  Projetado e desenvolvido com carinho pra galera mais cool (e faminta) da internet. </div>
 			</footer>
 	</body>
 </html>
